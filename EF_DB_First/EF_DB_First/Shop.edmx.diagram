@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b5eb69af20f74b19beec17f9a5bdc7ed" Name="Diagram1">
+        <EntityTypeShape EntityType="ComputerShopModel.Account" Width="1.5" PointX="3.125" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComputerShopModel.Bank" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComputerShopModel.Category" Width="1.5" PointX="3.75" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComputerShopModel.Contragent" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComputerShopModel.Features" Width="1.5" PointX="6" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComputerShopModel.FeatureValues" Width="1.5" PointX="8.25" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComputerShopModel.Nomeklatura" Width="1.5" PointX="6" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComputerShopModel.Personnel" Width="1.5" PointX="3.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComputerShopModel.SerialNumbers" Width="1.5" PointX="8.25" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComputerShopModel.Shop" Width="1.5" PointX="1.5" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComputerShopModel.Supply" Width="1.5" PointX="6" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComputerShopModel.SupplyNomenklatura" Width="1.5" PointX="8.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComputerShopModel.sysdiagrams" Width="1.5" PointX="8.75" PointY="7.5" IsExpanded="true" />
+        <AssociationConnector Association="ComputerShopModel.Bank_Account_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="ComputerShopModel.Client_Account_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="ComputerShopModel.Category_Category_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="ComputerShopModel.Category_Nomeklatura_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="ComputerShopModel.Contragent_Supply_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="ComputerShopModel.Features_FeatureValues_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="ComputerShopModel.Nomeklatura_FeatureValues_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="ComputerShopModel.Nomeklatura_SerialNumbers_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="ComputerShopModel.Nomeklatura_SupplyNomenklatura_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="ComputerShopModel.Personnel_Shop_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="ComputerShopModel.Personnel_Supply_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="ComputerShopModel.Shop_Personnel_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="ComputerShopModel.Shop_Supply_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="ComputerShopModel.Supply_SupplyNomenklatura_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="ComputerShopModel.CategoryFeatures" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
