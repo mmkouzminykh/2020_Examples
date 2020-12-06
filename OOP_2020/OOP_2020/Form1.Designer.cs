@@ -30,6 +30,8 @@
         {
             this.btnCreateHuman = new System.Windows.Forms.Button();
             this.txtTestValue = new System.Windows.Forms.TextBox();
+            this.btnInfo = new System.Windows.Forms.Button();
+            this.txtInfo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnCreateHuman
@@ -49,11 +51,31 @@
             this.txtTestValue.Size = new System.Drawing.Size(132, 20);
             this.txtTestValue.TabIndex = 1;
             // 
+            // btnInfo
+            // 
+            this.btnInfo.Location = new System.Drawing.Point(12, 57);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(75, 23);
+            this.btnInfo.TabIndex = 2;
+            this.btnInfo.Text = "Get Info";
+            this.btnInfo.UseVisualStyleBackColor = true;
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
+            // 
+            // txtInfo
+            // 
+            this.txtInfo.Location = new System.Drawing.Point(93, 60);
+            this.txtInfo.Multiline = true;
+            this.txtInfo.Name = "txtInfo";
+            this.txtInfo.Size = new System.Drawing.Size(360, 172);
+            this.txtInfo.TabIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtInfo);
+            this.Controls.Add(this.btnInfo);
             this.Controls.Add(this.txtTestValue);
             this.Controls.Add(this.btnCreateHuman);
             this.Name = "Form1";
@@ -67,6 +89,8 @@
 
         private System.Windows.Forms.Button btnCreateHuman;
         private System.Windows.Forms.TextBox txtTestValue;
+        private System.Windows.Forms.Button btnInfo;
+        private System.Windows.Forms.TextBox txtInfo;
     }
 }
 

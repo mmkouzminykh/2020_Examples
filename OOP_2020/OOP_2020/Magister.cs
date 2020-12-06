@@ -13,5 +13,21 @@ namespace OOP_2020
         {
 
         }
+
+        public override string GetInfo()
+        {
+            return "Вызвана из Magister";
+        }
+
+        public override string GetInfoInt()
+        {
+            return "Вызвана из Magister";
+        }
+
+
+        public new string GetInfo2()
+        {
+            return "Вызвана из Magister";
+        }
     }
 }

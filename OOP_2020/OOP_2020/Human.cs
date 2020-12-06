@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace OOP_2020
 {
-    public class Human
+    public abstract class Human: IGetInfo
     {
         public readonly string testVar;
         protected string _Name;
@@ -132,6 +132,13 @@ namespace OOP_2020
             }
         }
 
+        public abstract string GetInfo();        
+
+        public string GetInfo2()
+        {
+            return "Вызван из Human";
+        }
+
         public int GetAge()
         {
             return DateTime.Now.Year - _Birthday.Year;
@@ -164,6 +171,8 @@ namespace OOP_2020
                 return false;
             return true;
         }
+
+        public abstract string GetInfoInt();
 
         public static bool operator==(Human first, Human second)
         {

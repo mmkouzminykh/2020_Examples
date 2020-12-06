@@ -19,5 +19,19 @@ namespace OOP_2020
 
         [System.ComponentModel.DataAnnotations.Schema.ForeignKey("GroupCode")]
         public Group Group { get; set; }
+
+        public override string GetInfo()
+        {
+            return "Вызван из Student";
+        }
+
+        public override string GetInfoInt()
+        {
+            return "Вызван из Student";
+        }
+        public new string GetInfo2()
+        {
+            return "Вызван из Student";
+        }
     }
 }

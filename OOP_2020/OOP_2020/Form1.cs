@@ -41,7 +41,7 @@ namespace OOP_2020
             Student s = new Student("Иван", "Иванович", "Иванов", new DateTime(2000, 5, 10), "Киров");            
             Human h = s;            
 
-            Human h1 = new Human("Петр", "Петрович", "Петров");
+            //Human h1 = new Human("Петр", "Петрович", "Петров");
             Student s2;
 
             /*
@@ -68,8 +68,64 @@ namespace OOP_2020
         private void ChangeName(Human h)
         {
             //
-            h = new Human();
-            h.Name = "New name";
+            //h = new Human();
+            //h.Name = "New name";
+        }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            txtInfo.Text = "";
+
+            //Human h = new Human();
+            //txtInfo.Text = h.GetInfo2();
+
+            //txtInfo.Text += Environment.NewLine;
+
+            Human s = new Student("Василий", "Петрович", "Сергеев", new DateTime(2000, 1, 25), "Слободской");
+            txtInfo.Text += s.GetInfo2();
+
+            txtInfo.Text += Environment.NewLine;
+
+            Human m = new Magister("Андрей", "Иванович", "Коршунов", new DateTime(2002, 5, 18), "Киров");
+            txtInfo.Text += m.GetInfo2();
+
+            Employee emp = new Employee("Роман", "Алексеевич", "Павлов", new DateTime(1980, 11, 2), "Киров", "Преподаватель");
+
+            Human[] arr = new Human[] {s, m, emp };
+            for (int i = 0; i < 3; i++)
+            {
+                txtInfo.Text += Environment.NewLine;
+                txtInfo.Text += arr[i].GetInfo();
+            }
+
+            for (int i = 0; i < 3; i++)
+            {
+                txtInfo.Text += Environment.NewLine;
+                switch (arr[i])
+                {
+                    case Magister m2:
+                        txtInfo.Text += m2.GetInfo2();
+                        break;
+                    case Student s2:
+                        txtInfo.Text += s2.GetInfo2();
+                        break;
+                    case Human h2:
+                        txtInfo.Text += h2.GetInfo2();
+                        break;
+                }
+            }
+
+            txtInfo.Text += Environment.NewLine;
+            txtInfo.Text += "--- interface ---";
+
+            TestClass t = new TestClass();
+
+            IGetInfo[] igf = new IGetInfo[] { s, m, emp, t };
+            for (int i = 0; i < 4; i++)
+            {
+                txtInfo.Text += Environment.NewLine;
+                txtInfo.Text += igf[i].GetInfoInt();
+            }
         }
     }
 }
