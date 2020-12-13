@@ -65,6 +65,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Group.cs" />
+    <Compile Include="GroupEnumerator.cs" />
     <Compile Include="Human.cs" />
     <Compile Include="IGetFullInfo.cs" />
     <Compile Include="IGetInfo.cs" />

@@ -127,5 +127,28 @@ namespace OOP_2020
                 txtInfo.Text += igf[i].GetInfoInt();
             }
         }
+
+        private void btnIEnumerableTest_Click(object sender, EventArgs e)
+        {            
+            using (Group group = new Group())
+            {
+                Student s = new Student("Василий", "Петрович", "Сергеев", new DateTime(2000, 1, 25), "Слободской");
+                group.Students.Add(s);
+                s = new Student("Андрей", "Иванович", "Петров", new DateTime(2000, 1, 25), "Киров");
+                group.Students.Add(s);
+                s = new Student("Роман", "Алексеевич", "Иванов", new DateTime(2000, 1, 25), "Киров");
+                group.Students.Add(s);
+
+                txtInfo.Text = "";
+
+                foreach (var st in group)
+                {
+                    txtInfo.Text += st.ToString();
+                    txtInfo.Text += Environment.NewLine;
+                }
+            }
+
+            GC.Collect();
+        }
     }
 }
