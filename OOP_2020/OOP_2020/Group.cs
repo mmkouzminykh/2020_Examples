@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -8,12 +9,18 @@ using System.Threading.Tasks;
 
 namespace OOP_2020
 {
-    public class Group
+    public class Group: IEnumerable<Student>, IDisposable
     {
         public Group()
         {
             Students = new List<Student>();
         }
+
+        ~Group()
+        {
+
+        }
+
         [Key]
         public int GroupCode { get; set; }
 
@@ -29,5 +36,29 @@ namespace OOP_2020
         [ForeignKey("SpecialityId")]
         public Speciality Speciality { get; set; }
 
+        public void Dispose()
+        {
+            System.Windows.Forms.MessageBox.Show("Is disposing");
+        }
+
+        public IEnumerator<Student> GetEnumerator()
+        {
+            //return this.Students.GetEnumerator();
+            //return new GroupEnumerator((List<Student>)this.Students);
+            foreach(var s in Students)
+            {
+                yield return s;
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            //return this.Students.GetEnumerator();
+            //return new GroupEnumerator((List<Student>)this.Students);
+            foreach (var s in Students)
+            {
+                yield return s;
+            }
+        }
     }
 }
